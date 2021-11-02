@@ -652,7 +652,7 @@ void AirsimROSWrapper::append_static_camera_tf(const std::string& vehicle_name, 
 {
     geometry_msgs::TransformStamped static_cam_tf_body_msg;
     static_cam_tf_body_msg.header.frame_id = "fsds/" + vehicle_name;
-    static_cam_tf_body_msg.child_frame_id = "fsds/" + camera_name;
+    static_cam_tf_body_msg.child_frame_id = "fsds/camera/" + camera_name;
     static_cam_tf_body_msg.transform.translation.x = camera_setting.position.x();
     static_cam_tf_body_msg.transform.translation.y = camera_setting.position.y();
     static_cam_tf_body_msg.transform.translation.z = camera_setting.position.z();
